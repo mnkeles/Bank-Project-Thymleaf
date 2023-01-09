@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>WELCOME TO BANK</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   </head>
+<body>
+<form>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class="text-center">WELCOME TO BANK</h1>
+            <h2 class="text-center">You can do this: </h2>
+
+            <h3 class="text-center">Customer Processes</h3>
+            <ul>
+                <li><a th:href="@{/customer}" class="btn btn-primary">Customer Get All</a></li>
+                <li><a th:href="@{/customer/create}" class="btn btn-primary">Customer Create</a></li>
+
+            </ul>
+            <h3 class="text-center">Account Processes</h3>
+            <ul>
+                <li><a th:href="@{/account}" class="btn btn-primary">Account Get All</a></li>
+                <li><a th:href="@{/account/create}" class="btn btn-primary">Account Create</a></li>
+                
+            </ul>
+            <h3 class="text-center">Money Processes</h3>
+            <ul>
+                <li><a th:href="@{/money/process}" class="btn btn-primary">Money Process Get All</a></li>
+                <li><a th:href="@{/money/transfer}" class="btn btn-primary">Money Transfer</a></li>
+                <li><a th:href="@{/money/add}" class="btn btn-primary">Money Add</a></li>
+                <li><a th:href="@{/money/withdraw}" class="btn btn-primary">Money withdraw</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</form>
+</body>
+</html>

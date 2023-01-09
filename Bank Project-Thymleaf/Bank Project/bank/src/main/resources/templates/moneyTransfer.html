@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title> Money Transfer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class="text-center"> MONEY TRANSFER </h1>
+            <div class="card-body">
+                <form th:action="@{/money/transfer}" th:object="${moneyTransfer}" method="post">
+                    <div class="form-group">
+                        <label> From Id</label>
+                        <input type="text" name="fromId" th:field="*{fromId}" class="form-control"
+                               placeholder="Enter From Id">
+                    </div>
+                    <div class="form-group">
+                        <label>To Id</label>
+                        <input type="number" name="toId" th:field="*{toId}" class="form-control"
+                               placeholder="Enter To Id">
+                    </div>
+                    <div class="form-group">
+                        <label>Amount</label>
+                        <input type="text" name="amount" th:field="*{amount}" class="form-control"
+                               placeholder="Enter Amount">
+                    </div>
+                    <div class="box-footer">
+                        <br>
+                        <button type="submit" class="btn btn-primary">
+                            ADD
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
